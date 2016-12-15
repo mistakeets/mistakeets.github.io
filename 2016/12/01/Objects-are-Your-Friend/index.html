@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Objects are Your Friend | Becoming Friends with JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
+Accessing Nested Objects:var myStorage = {
+  &amp;quot;car&amp;quot;: {
+    &amp;quot;ins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Objects are Your Friend">
+<meta property="og:url" content="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/index.html">
+<meta property="og:site_name" content="Becoming Friends with JavaScript">
+<meta property="og:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
+Accessing Nested Objects:var myStorage = {
+  &amp;quot;car&amp;quot;: {
+    &amp;quot;ins">
+<meta property="og:updated_time" content="2016-12-05T12:12:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Objects are Your Friend">
+<meta name="twitter:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
+Accessing Nested Objects:var myStorage = {
+  &amp;quot;car&amp;quot;: {
+    &amp;quot;ins">
+  
+    <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Becoming Friends with JavaScript</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mistakeets.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Objects-are-Your-Friend" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/01/Objects-are-Your-Friend/" class="article-date">
+  <time datetime="2016-12-02T00:33:32.000Z" itemprop="datePublished">2016-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Objects are Your Friend
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.</p>
+<h2 id="Accessing-Nested-Objects"><a href="#Accessing-Nested-Objects" class="headerlink" title="Accessing Nested Objects:"></a>Accessing Nested Objects:</h2><pre><code>var myStorage = {
+  &quot;car&quot;: {
+    &quot;inside&quot;: {
+      &quot;glove box&quot;: &quot;maps&quot;,
+      &quot;passenger seat&quot;: &quot;crumbs&quot;
+     },
+    &quot;outside&quot;: {
+      &quot;trunk&quot;: &quot;jack&quot;
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside[&quot;glove box&quot;];
+</code></pre><hr>
+<h2 id="Accessing-Nested-Arrays"><a href="#Accessing-Nested-Arrays" class="headerlink" title="Accessing Nested Arrays:"></a>Accessing Nested Arrays:</h2><pre><code>var myPlants = [
+  {
+    type: &quot;flowers&quot;,
+    list: [
+      &quot;rose&quot;,
+      &quot;tulip&quot;,
+      &quot;dandelion&quot;
+    ]
+  },
+  {
+    type: &quot;trees&quot;,
+    list: [
+      &quot;fir&quot;,
+      &quot;pine&quot;,
+      &quot;birch&quot;
+    ]
+  }  
+];
+
+var secondTree = myPlants[1].list[1];
+</code></pre><hr>
+<h2 id="Using-Objects-for-Lookups"><a href="#Using-Objects-for-Lookups" class="headerlink" title="Using Objects for Lookups:"></a>Using Objects for Lookups:</h2><pre><code>function phoneticLookup(val) {
+  var result = &quot;&quot;;
+  var lookup = {
+    alpha: &quot;Adams&quot;,
+    bravo: &quot;Boston&quot;,
+    charlie : &quot;Chicago&quot;,
+    delta : &quot;Denver&quot;,
+    echo : &quot;Easy&quot;,
+    foxtrot : &quot;Frank&quot;,
+
+  };
+
+  result = lookup[val];
+  return result;
+}
+
+// Change this value to test
+phoneticLookup(&quot;alpha&quot;);
+</code></pre><hr>
+<p>The real challenge of the day was working on a tutorial called Record Collection where you have a JSON object that represents a collection of music, and a function must be created to modify the data in the object (such as adding a song name, updating an artist name, or adding an album name). My team mate and I struggled to find a solution however we eventually got everything to work. A very proud “a ha” moment!</p>
+<h2 id="Record-Collection-code"><a href="#Record-Collection-code" class="headerlink" title="Record Collection code:"></a>Record Collection code:</h2><pre><code>var collection = {
+    &quot;2548&quot;: {
+      &quot;album&quot;: &quot;Slippery When Wet&quot;,
+      &quot;artist&quot;: &quot;Bon Jovi&quot;,
+      &quot;tracks&quot;: [
+        &quot;Let It Rock&quot;,
+        &quot;You Give Love a Bad Name&quot;
+      ]
+    },
+    &quot;2468&quot;: {
+      &quot;album&quot;: &quot;1999&quot;,
+      &quot;artist&quot;: &quot;Prince&quot;,
+      &quot;tracks&quot;: [
+        &quot;1999&quot;,
+        &quot;Little Red Corvette&quot;
+      ]
+    },
+    &quot;1245&quot;: {
+      &quot;artist&quot;: &quot;Robert Palmer&quot;,
+      &quot;tracks&quot;: [ ]
+    },
+    &quot;5439&quot;: {
+      &quot;album&quot;: &quot;ABBA Gold&quot;
+    }
+};
+// Keep a copy of the collection for tests
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords(id, prop, value) {
+  if (prop === &quot;tracks&quot; &amp;&amp; value !== &quot;&quot;) {
+   if(collection[id][prop]) {
+    collection[id][prop].push(value);
+   }
+    else {
+    collection[id][prop]=[value];
+    }
+  } else if (value !== &quot;&quot;) {
+    collection[id][prop] = value;
+  } else {
+    delete collection[id][prop];
+  }
+
+  return collection;
+}
+
+// Alter values below to test your code
+updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
+</code></pre><hr>
+<p>Good times! </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciwqvqlh000056ps4qmr91klh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/02/Arrays-and-Functions/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Arrays and Basic Algorithms
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/30/Javascript-Basics/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Javascript Basics</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo-Algorithm-Project1/" style="font-size: 10px;">Hexo, Algorithm, Project1</a> <a href="/tags/Hexo-Algorithms/" style="font-size: 10px;">Hexo, Algorithms</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/learn-project1-bootstrap/" style="font-size: 10px;">learn, project1, bootstrap</a> <a href="/tags/orientation-first/" style="font-size: 10px;">orientation, first</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/12/03/Algorithms-and-Fighting-Hexo/">More Algorithms and Fighting Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/02/Arrays-and-Functions/">Arrays and Basic Algorithms</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/Objects-are-Your-Friend/">Objects are Your Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/30/Javascript-Basics/">Javascript Basics</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Keith Oppel<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

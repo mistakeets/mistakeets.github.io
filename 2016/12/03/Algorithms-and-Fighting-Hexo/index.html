@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>More Algorithms and Fighting Hexo | Becoming Friends with JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="My team mate and I wanted to continue working on basic algorithms, so we agreed to meet up at the Learners Guild on Saturday. After attending a nice event on Friday night, I was ready to go back to th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="More Algorithms and Fighting Hexo">
+<meta property="og:url" content="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/index.html">
+<meta property="og:site_name" content="Becoming Friends with JavaScript">
+<meta property="og:description" content="My team mate and I wanted to continue working on basic algorithms, so we agreed to meet up at the Learners Guild on Saturday. After attending a nice event on Friday night, I was ready to go back to th">
+<meta property="og:updated_time" content="2016-12-05T12:31:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="More Algorithms and Fighting Hexo">
+<meta name="twitter:description" content="My team mate and I wanted to continue working on basic algorithms, so we agreed to meet up at the Learners Guild on Saturday. After attending a nice event on Friday night, I was ready to go back to th">
+  
+    <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Becoming Friends with JavaScript</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mistakeets.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Algorithms-and-Fighting-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/03/Algorithms-and-Fighting-Hexo/" class="article-date">
+  <time datetime="2016-12-04T00:56:12.000Z" itemprop="datePublished">2016-12-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      More Algorithms and Fighting Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>My team mate and I wanted to continue working on basic algorithms, so we agreed to meet up at the Learners Guild on Saturday. After attending a nice event on Friday night, I was ready to go back to the Guild on Saturday and tackle more challenges.</p>
+<p>The first algorithm we worked on was a fun little challenge that I had seen before in previous programming courses: let’s find the longest word! This was very helpful to see in JavaScript as it gave me an opportunity to see how various syntax interacts when you build the function.</p>
+<h2 id="Find-the-Longest-Word-in-a-String-code"><a href="#Find-the-Longest-Word-in-a-String-code" class="headerlink" title="Find the Longest Word in a String code:"></a>Find the Longest Word in a String code:</h2><pre><code>function findLongestWord(str) {
+  var arr = str.split(&quot; &quot;);
+  var count = arr[0];
+  for (var i = 1; i &lt;= arr.length-1; i++) {
+    if(count.length &lt; arr[i].length){
+      count = arr[i];
+    }
+  }
+  return count.length;
+}
+
+findLongestWord(&quot;The quick brown fox jumped over the lazy dog&quot;);
+</code></pre><hr>
+<p>The next tutorial was a bit more challenging, and my team mate did an excellent job of helping me understand how to create a function that will capitalize the first letter of each word. At first we tried various ways to solve this problem, then my team mate figured out an effective solution using split, map, and slice.</p>
+<h2 id="Title-Case-a-Sentence"><a href="#Title-Case-a-Sentence" class="headerlink" title="Title Case a Sentence:"></a>Title Case a Sentence:</h2><pre><code>function titleCase(str) {
+
+  return str.toLowerCase().split(&apos; &apos;).map(function(word) {
+    return(word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(&apos; &apos;);
+}
+
+titleCase(&quot;I&apos;m a little tea pot&quot;);
+</code></pre><hr>
+<p>Pair programming was also useful for working on the next tutorial, which was to make a function that would return the largest numbers in arrays. By working together in a pair, we could look at the various ways the code could be written out, and which option was more effective. After bouncing a few ideas around, we ended up using a nested for loop within our function and would increment through the input to find the largest number in each array.</p>
+<h2 id="Return-the-Largest-Numbers-in-Arrays"><a href="#Return-the-Largest-Numbers-in-Arrays" class="headerlink" title="Return the Largest Numbers in Arrays:"></a>Return the Largest Numbers in Arrays:</h2><pre><code>function largestOfFour(arr) {
+  var newArr = [];
+  var tempArr = arr[0][0];
+  for (var i = 0; i &lt; arr.length; i++){
+    tempArr = 0;
+    for (var j = 0; j &lt; arr[i].length; j++){
+      if(tempArr &lt; arr[i][j]){
+        tempArr = arr[i][j];
+      }
+    }
+    newArr.push(tempArr);
+  }
+  return newArr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+</code></pre><hr>
+<p>As a final tutorial for the day, we worked on an algorithm that checks if a string (first argument, str) ends with the given target string (second argument, target). The challenge behind this tutorial was to make function that would perform this check without using the method .endsWith()</p>
+<p>This was another tutorial where my team mate really shined and showed his strength as a good problem solver. The solution he came up with was much more effective and elegant than my solution which had lots of loops(and at first my solution would not pass all the test cases).</p>
+<h2 id="Confirm-the-Ending"><a href="#Confirm-the-Ending" class="headerlink" title="Confirm the Ending:"></a>Confirm the Ending:</h2><pre><code>function confirmEnding(str, target) {
+  // &quot;Never give up and good luck will find you.&quot;
+  // -- Falcor
+
+  return str.substr(str.length - (target.length)) === target;
+}
+
+confirmEnding(&quot;Bastian&quot;, &quot;n&quot;);
+</code></pre><hr>
+<p>Once we finished these algorithm tutorials we again switched gears and looked at setting up our web pages using Hexo for the blog framework. The setup process ran without a hitch on my laptop, however for some reason the various files/folders installed in a different location on my team mate’s laptop and threw all kinds of error messages during the configuration process. It almost felt as if the laptop was trying to tease us.</p>
+<p>After re-installing a package or two and digging through the configuration file Hexo uses, I managed to help my team mate solve the problem on his laptop and we were good to go. Website live! Now we have a system in place that allows us to create blog entries using Markdown syntax with various Hexo commands to handle page generation and deployment to Github Pages. Success!</p>
+<p>The first week at the Learners Guild was an amazing experience that moved so quickly. Pair programming was a joy and I am looking forward to Week 2.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/" data-id="ciwqvqlgm00006ps4gs7w5qez" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/02/Arrays-and-Functions/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Arrays and Basic Algorithms</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo-Algorithm-Project1/" style="font-size: 10px;">Hexo, Algorithm, Project1</a> <a href="/tags/Hexo-Algorithms/" style="font-size: 10px;">Hexo, Algorithms</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/learn-project1-bootstrap/" style="font-size: 10px;">learn, project1, bootstrap</a> <a href="/tags/orientation-first/" style="font-size: 10px;">orientation, first</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/12/03/Algorithms-and-Fighting-Hexo/">More Algorithms and Fighting Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/02/Arrays-and-Functions/">Arrays and Basic Algorithms</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/01/Objects-are-Your-Friend/">Objects are Your Friend</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/30/Javascript-Basics/">Javascript Basics</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Keith Oppel<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
