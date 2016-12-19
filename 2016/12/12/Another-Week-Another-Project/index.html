@@ -3,27 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Objects are Your Friend | Becoming Friends with JavaScript</title>
+  <title>Another Week, Another Project | Becoming Friends with JavaScript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
+  <meta name="description" content="Time to dive into another project. Monday always seems to be an exciting day here at the guild. There is this buzzing kind of energy. People rushing around to review prior week projects, then obtainin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Objects are Your Friend">
-<meta property="og:url" content="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/index.html">
+<meta property="og:title" content="Another Week, Another Project">
+<meta property="og:url" content="http://mistakeets.github.io/2016/12/12/Another-Week-Another-Project/index.html">
 <meta property="og:site_name" content="Becoming Friends with JavaScript">
-<meta property="og:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
-<meta property="og:updated_time" content="2016-12-05T12:12:58.000Z">
+<meta property="og:description" content="Time to dive into another project. Monday always seems to be an exciting day here at the guild. There is this buzzing kind of energy. People rushing around to review prior week projects, then obtainin">
+<meta property="og:updated_time" content="2016-12-19T11:06:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Objects are Your Friend">
-<meta name="twitter:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
+<meta name="twitter:title" content="Another Week, Another Project">
+<meta name="twitter:description" content="Time to dive into another project. Monday always seems to be an exciting day here at the guild. There is this buzzing kind of energy. People rushing around to review prior week projects, then obtainin">
   
     <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
   
@@ -72,10 +63,10 @@ Accessing Nested Objects:var myStorage = {
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Objects-are-Your-Friend" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Another-Week-Another-Project" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/01/Objects-are-Your-Friend/" class="article-date">
-  <time datetime="2016-12-02T00:33:32.000Z" itemprop="datePublished">2016-12-01</time>
+    <a href="/2016/12/12/Another-Week-Another-Project/" class="article-date">
+  <time datetime="2016-12-13T05:06:30.000Z" itemprop="datePublished">2016-12-12</time>
 </a>
     
   </div>
@@ -86,7 +77,7 @@ Accessing Nested Objects:var myStorage = {
         
   
     <h1 class="article-title" itemprop="name">
-      Objects are Your Friend
+      Another Week, Another Project
     </h1>
   
 
@@ -94,137 +85,37 @@ Accessing Nested Objects:var myStorage = {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.</p>
-<h2 id="Accessing-Nested-Objects"><a href="#Accessing-Nested-Objects" class="headerlink" title="Accessing Nested Objects:"></a>Accessing Nested Objects:</h2><pre><code>var myStorage = {
-  &quot;car&quot;: {
-    &quot;inside&quot;: {
-      &quot;glove box&quot;: &quot;maps&quot;,
-      &quot;passenger seat&quot;: &quot;crumbs&quot;
-     },
-    &quot;outside&quot;: {
-      &quot;trunk&quot;: &quot;jack&quot;
-    }
-  }
-};
-
-var gloveBoxContents = myStorage.car.inside[&quot;glove box&quot;];
-</code></pre><hr>
-<h2 id="Accessing-Nested-Arrays"><a href="#Accessing-Nested-Arrays" class="headerlink" title="Accessing Nested Arrays:"></a>Accessing Nested Arrays:</h2><pre><code>var myPlants = [
-  {
-    type: &quot;flowers&quot;,
-    list: [
-      &quot;rose&quot;,
-      &quot;tulip&quot;,
-      &quot;dandelion&quot;
-    ]
-  },
-  {
-    type: &quot;trees&quot;,
-    list: [
-      &quot;fir&quot;,
-      &quot;pine&quot;,
-      &quot;birch&quot;
-    ]
-  }  
-];
-
-var secondTree = myPlants[1].list[1];
-</code></pre><hr>
-<h2 id="Using-Objects-for-Lookups"><a href="#Using-Objects-for-Lookups" class="headerlink" title="Using Objects for Lookups:"></a>Using Objects for Lookups:</h2><pre><code>function phoneticLookup(val) {
-  var result = &quot;&quot;;
-  var lookup = {
-    alpha: &quot;Adams&quot;,
-    bravo: &quot;Boston&quot;,
-    charlie : &quot;Chicago&quot;,
-    delta : &quot;Denver&quot;,
-    echo : &quot;Easy&quot;,
-    foxtrot : &quot;Frank&quot;,
-
-  };
-
-  result = lookup[val];
-  return result;
-}
-
-// Change this value to test
-phoneticLookup(&quot;alpha&quot;);
-</code></pre><hr>
-<p>The real challenge of the day was working on a tutorial called Record Collection where you have a JSON object that represents a collection of music, and a function must be created to modify the data in the object (such as adding a song name, updating an artist name, or adding an album name). My team mate and I struggled to find a solution however we eventually got everything to work. A very proud “a ha” moment!</p>
-<h2 id="Record-Collection-code"><a href="#Record-Collection-code" class="headerlink" title="Record Collection code:"></a>Record Collection code:</h2><pre><code>var collection = {
-    &quot;2548&quot;: {
-      &quot;album&quot;: &quot;Slippery When Wet&quot;,
-      &quot;artist&quot;: &quot;Bon Jovi&quot;,
-      &quot;tracks&quot;: [
-        &quot;Let It Rock&quot;,
-        &quot;You Give Love a Bad Name&quot;
-      ]
-    },
-    &quot;2468&quot;: {
-      &quot;album&quot;: &quot;1999&quot;,
-      &quot;artist&quot;: &quot;Prince&quot;,
-      &quot;tracks&quot;: [
-        &quot;1999&quot;,
-        &quot;Little Red Corvette&quot;
-      ]
-    },
-    &quot;1245&quot;: {
-      &quot;artist&quot;: &quot;Robert Palmer&quot;,
-      &quot;tracks&quot;: [ ]
-    },
-    &quot;5439&quot;: {
-      &quot;album&quot;: &quot;ABBA Gold&quot;
-    }
-};
-// Keep a copy of the collection for tests
-var collectionCopy = JSON.parse(JSON.stringify(collection));
-
-function updateRecords(id, prop, value) {
-  if (prop === &quot;tracks&quot; &amp;&amp; value !== &quot;&quot;) {
-   if(collection[id][prop]) {
-    collection[id][prop].push(value);
-   }
-    else {
-    collection[id][prop]=[value];
-    }
-  } else if (value !== &quot;&quot;) {
-    collection[id][prop] = value;
-  } else {
-    delete collection[id][prop];
-  }
-
-  return collection;
-}
-
-// Alter values below to test your code
-updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
-</code></pre><hr>
-<p>Good times! </p>
+        <p>Time to dive into another project. Monday always seems to be an exciting day here at the guild. There is this buzzing kind of energy. People rushing around to review prior week projects, then obtaining new projects and a new team mate for pair programming. It almost makes Monday not so bad (however I still dislike waking up early on Monday haha). Let’s see what code awaits this week.</p>
+<h1 id="Advanced-JavaScript"><a href="#Advanced-JavaScript" class="headerlink" title="Advanced JavaScript"></a>Advanced JavaScript</h1><p>This week I will be working on the project goal titled Advanced JavaScript. There are a variety of topics covered within the project goal, such as Node.JS tutorials, Express, object-oriented programming, and the module pattern. There are also suggested tutorials for additional review tutorials related to loops/arrays/objects, JQuery, and the DOM.</p>
+<h1 id="Time-constraints"><a href="#Time-constraints" class="headerlink" title="Time constraints"></a>Time constraints</h1><p>After reviewing the project specs, it is definitely a lot of information to cover. My team mate has suggested to cover 3 topics per day, and to approach the project as a general overview/introduction. This sounds like a good game plan to me, and I am looking forward to working on this project.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciww18ar5000ftys4dmid3cix" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/12/Another-Week-Another-Project/" data-id="ciww18aqi0001tys4r78o0gjc" class="article-share-link">Partager</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/12/02/Arrays-and-Functions/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/12/12/Object-Oriented-JavaScript/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
-          Arrays and Basic Algorithms
+          Object-Oriented JavaScript
         
       </div>
     </a>
   
   
-    <a href="/2016/11/30/Javascript-Basics/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/03/Algorithms-and-Fighting-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Javascript Basics</div>
+      <div class="article-nav-title">More Algorithms and Fighting Hexo</div>
     </a>
   
 </nav>

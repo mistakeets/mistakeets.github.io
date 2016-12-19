@@ -3,27 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Objects are Your Friend | Becoming Friends with JavaScript</title>
+  <title>Becoming Friends with JavaScript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Objects are Your Friend">
-<meta property="og:url" content="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Becoming Friends with JavaScript">
+<meta property="og:url" content="http://mistakeets.github.io/page/2/index.html">
 <meta property="og:site_name" content="Becoming Friends with JavaScript">
-<meta property="og:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
-<meta property="og:updated_time" content="2016-12-05T12:12:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Objects are Your Friend">
-<meta name="twitter:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
+<meta name="twitter:title" content="Becoming Friends with JavaScript">
   
     <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
   
@@ -72,10 +59,12 @@ Accessing Nested Objects:var myStorage = {
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Objects-are-Your-Friend" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-My-Test-Post" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/01/Objects-are-Your-Friend/" class="article-date">
-  <time datetime="2016-12-02T00:33:32.000Z" itemprop="datePublished">2016-12-01</time>
+    <a href="/2016/11/29/My-Test-Post/" class="article-date">
+  <time datetime="2016-11-30T01:09:50.000Z" itemprop="datePublished">2016-11-29</time>
 </a>
     
   </div>
@@ -85,8 +74,8 @@ Accessing Nested Objects:var myStorage = {
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Objects are Your Friend
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
     </h1>
   
 
@@ -94,144 +83,94 @@ Accessing Nested Objects:var myStorage = {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.</p>
-<h2 id="Accessing-Nested-Objects"><a href="#Accessing-Nested-Objects" class="headerlink" title="Accessing Nested Objects:"></a>Accessing Nested Objects:</h2><pre><code>var myStorage = {
-  &quot;car&quot;: {
-    &quot;inside&quot;: {
-      &quot;glove box&quot;: &quot;maps&quot;,
-      &quot;passenger seat&quot;: &quot;crumbs&quot;
-     },
-    &quot;outside&quot;: {
-      &quot;trunk&quot;: &quot;jack&quot;
-    }
-  }
-};
-
-var gloveBoxContents = myStorage.car.inside[&quot;glove box&quot;];
+        <p>Today was the first full day of working on a project. My time was spent reviewing html tags, CSS, and I learned the basics of using Bootstrap. In my opinion bootstrap feels kind of “messy” when you nest tags inside tags (inside tags!) as shown in this code example which creates labelled buttons:</p>
+<hr>
+<pre><code>&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;h3 class=&quot;text-primary text-center&quot;&gt;jQuery Playground&lt;/h3&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-xs-6&quot;&gt;
+      &lt;h4&gt;#left-well&lt;/h4&gt;
+      &lt;div class=&quot;well&quot; id=&quot;left-well&quot;&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target1&quot;&gt;#target1&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target2&quot;&gt;#target2&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target3&quot;&gt;#target3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-xs-6&quot;&gt;
+      &lt;h4&gt;#right-well&lt;/h4&gt;
+      &lt;div class=&quot;well&quot; id=&quot;right-well&quot;&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target4&quot;&gt;#target4&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target5&quot;&gt;#target5&lt;/button&gt;
+        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target6&quot;&gt;#target6&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre><hr>
-<h2 id="Accessing-Nested-Arrays"><a href="#Accessing-Nested-Arrays" class="headerlink" title="Accessing Nested Arrays:"></a>Accessing Nested Arrays:</h2><pre><code>var myPlants = [
-  {
-    type: &quot;flowers&quot;,
-    list: [
-      &quot;rose&quot;,
-      &quot;tulip&quot;,
-      &quot;dandelion&quot;
-    ]
-  },
-  {
-    type: &quot;trees&quot;,
-    list: [
-      &quot;fir&quot;,
-      &quot;pine&quot;,
-      &quot;birch&quot;
-    ]
-  }  
-];
-
-var secondTree = myPlants[1].list[1];
-</code></pre><hr>
-<h2 id="Using-Objects-for-Lookups"><a href="#Using-Objects-for-Lookups" class="headerlink" title="Using Objects for Lookups:"></a>Using Objects for Lookups:</h2><pre><code>function phoneticLookup(val) {
-  var result = &quot;&quot;;
-  var lookup = {
-    alpha: &quot;Adams&quot;,
-    bravo: &quot;Boston&quot;,
-    charlie : &quot;Chicago&quot;,
-    delta : &quot;Denver&quot;,
-    echo : &quot;Easy&quot;,
-    foxtrot : &quot;Frank&quot;,
-
-  };
-
-  result = lookup[val];
-  return result;
-}
-
-// Change this value to test
-phoneticLookup(&quot;alpha&quot;);
-</code></pre><hr>
-<p>The real challenge of the day was working on a tutorial called Record Collection where you have a JSON object that represents a collection of music, and a function must be created to modify the data in the object (such as adding a song name, updating an artist name, or adding an album name). My team mate and I struggled to find a solution however we eventually got everything to work. A very proud “a ha” moment!</p>
-<h2 id="Record-Collection-code"><a href="#Record-Collection-code" class="headerlink" title="Record Collection code:"></a>Record Collection code:</h2><pre><code>var collection = {
-    &quot;2548&quot;: {
-      &quot;album&quot;: &quot;Slippery When Wet&quot;,
-      &quot;artist&quot;: &quot;Bon Jovi&quot;,
-      &quot;tracks&quot;: [
-        &quot;Let It Rock&quot;,
-        &quot;You Give Love a Bad Name&quot;
-      ]
-    },
-    &quot;2468&quot;: {
-      &quot;album&quot;: &quot;1999&quot;,
-      &quot;artist&quot;: &quot;Prince&quot;,
-      &quot;tracks&quot;: [
-        &quot;1999&quot;,
-        &quot;Little Red Corvette&quot;
-      ]
-    },
-    &quot;1245&quot;: {
-      &quot;artist&quot;: &quot;Robert Palmer&quot;,
-      &quot;tracks&quot;: [ ]
-    },
-    &quot;5439&quot;: {
-      &quot;album&quot;: &quot;ABBA Gold&quot;
-    }
-};
-// Keep a copy of the collection for tests
-var collectionCopy = JSON.parse(JSON.stringify(collection));
-
-function updateRecords(id, prop, value) {
-  if (prop === &quot;tracks&quot; &amp;&amp; value !== &quot;&quot;) {
-   if(collection[id][prop]) {
-    collection[id][prop].push(value);
-   }
-    else {
-    collection[id][prop]=[value];
-    }
-  } else if (value !== &quot;&quot;) {
-    collection[id][prop] = value;
-  } else {
-    delete collection[id][prop];
-  }
-
-  return collection;
-}
-
-// Alter values below to test your code
-updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
-</code></pre><hr>
-<p>Good times! </p>
+<p>It took me a little while to get used to working with nested tags again, however working with Bootstrap was fun as I also learned you can use Font Awesome to apply a style or font to a web page using Bootstrap.</p>
+<p>All in all I felt that working through some html, CSS, and Bootstrap tutorials was a useful refresher, however I also felt like I was not pushing myself hard enough.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciww18ar5000ftys4dmid3cix" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/11/29/My-Test-Post/" data-id="ciww18aqy0009tys46c5cng7p" class="article-share-link">Partager</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li></ul>
+
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2016/12/02/Arrays-and-Functions/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Récent</strong>
-      <div class="article-nav-title">
-        
-          Arrays and Basic Algorithms
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/11/30/Javascript-Basics/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Javascript Basics</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/28/hello-world/" class="article-date">
+  <time datetime="2016-11-29T01:09:50.000Z" itemprop="datePublished">2016-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/28/hello-world/">My First Day</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>What a day! After orientation and meetings I chose a mentor and voted on my first project assignment here at the Learners Guild. Suddenly this whole new channel showed up in the chat application and I asked my mentor “Hey what the heck is this?!?!” Oh! I see… I have been assigned a team mate. This is an awesome process!</p>
+<p>My team mate and I will work on the goal of HTML/CSS &amp; JavaScript Basics this week. The majority of our time will be spent reviewing tutorials to ensure we have a solid foundation to build from going forward. This also feels like a good project work on during my first week as I need a refresher on basic JavaScript syntax. Before starting at the Guild I was taking an online course to learn the Python programming language, so now it is time to switch gears to become more comfortable with JavaScript again.</p>
+<p>Let the games begin!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/11/28/hello-world/" data-id="ciww18ar7000jtys4qt8cg37w" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
+
+    </footer>
+  </div>
   
 </article>
 
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 </section>
         
           <aside id="sidebar">

@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mistakeets.github.io"></form>
@@ -60,6 +60,425 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Project-Specs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/16/Project-Specs/" class="article-date">
+  <time datetime="2016-12-17T06:55:42.000Z" itemprop="datePublished">2016-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/16/Project-Specs/">Project Specs / Estimates</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>One thing I learned while working on the Advanced JavaScript project goal at the guild is that I should pay closer attention to project specs, and that I need to be more careful when estimating time. Initially my team mate had the idea to review each topic within the project spec, with the goal of 3 topics per day. This proved to be a very challenging goal to meet, and we were not able to cover all the topics we had in our project spec.</p>
+<p>If I was going to work on this project goal again, I would remove many of the specs and put more focus on just a few topics (such as spending the full week just learning Node).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/16/Project-Specs/" data-id="ciww18ar6000htys4u71exeyw" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-NPM-Basics" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/15/NPM-Basics/" class="article-date">
+  <time datetime="2016-12-16T03:45:05.000Z" itemprop="datePublished">2016-12-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/15/NPM-Basics/">NPM Basics</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The NPM Basics tutorial on Treehouse was a very informative tutorial that provided many useful tips and commands related to working with npm packages.</p>
+<h2 id="How-to-compare-packages-that-do-similar-things-such-as-bcrypt-vs-bcrypt-nodes"><a href="#How-to-compare-packages-that-do-similar-things-such-as-bcrypt-vs-bcrypt-nodes" class="headerlink" title="How to compare packages that do similar things (such as bcrypt vs bcrypt nodes)"></a>How to compare packages that do similar things (such as bcrypt vs bcrypt nodes)</h2><ol>
+<li>Look at how often new versions are released (are there regular updates or is there no active development?)</li>
+<li>Look at how many contributors on GitHub</li>
+<li>Look at google ranking</li>
+<li>Look for testing information</li>
+</ol>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>—npm init<br>(The utility asks you all the questions related to generating a package.json file instead of manually editing the file)<br>—name the package, version number, test command, entry point, open source license etc</p>
+<p>—save use to add an npm package to your dependency list on your package.json</p>
+<p>.gitignore file so you can define things to ignore such as have your project ignore npm packets during a deployment/git push (no need to upload npm packages to your GitHub page, thats what the package.json is for)</p>
+<p>—save-dev Dev dependency - define dependencies for developers / people planning to contribute to your project (packages not needed by end users)</p>
+<p>Node_env = production npm install (install only reg dependency, will not install dev dependency)</p>
+<h2 id="Versioning"><a href="#Versioning" class="headerlink" title="Versioning"></a>Versioning</h2><p>1.0.0<br>First digit = major release (1.0 to 2.0)<br>Second digit = minor release (such as 1.1)<br>Third digit = patch release (such as 1.0.1 or 1.1.3)</p>
+<p>Use Tilda ~ in the package.json to only allow new patch releases to be installed (such if depend is ver 0.8.3, you could use 0.8.4 or 0.8.5, but not 0.9)</p>
+<p>Use ^ to allow minor version (if you package.json has version 1.0 of something, but a new version is available, go ahead and allow npm update to install 1.1, but not 2.0)</p>
+<h2 id="Updating-npm-packages"><a href="#Updating-npm-packages" class="headerlink" title="Updating npm packages"></a>Updating npm packages</h2><p>npm update <package name=""> -g</package></p>
+<h2 id="Install-uninstall"><a href="#Install-uninstall" class="headerlink" title="Install / uninstall"></a>Install / uninstall</h2><p>npm install / npm uninstall</p>
+<p>Install-all : install reg dep and dev dep</p>
+<p>-g global install of the npm package</p>
+<p>npm uninstall <package name=""> —save-dev (remove a dev dependency)</package></p>
+<p>Npm uninstall <package name=""> -g (uninstall global)</package></p>
+<p>Npm outdated - check to see if any packages need to be updated</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/15/NPM-Basics/" data-id="ciww18aqr0005tys4nqt4vfcg" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm-package/">npm, package</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Express" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/14/Express/" class="article-date">
+  <time datetime="2016-12-14T10:20:13.000Z" itemprop="datePublished">2016-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/Express/">Express</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Express was another topic reviewed during the project. Express is a web framework built using Node. One of the primary things that Express handles is setting up routes, which are endpoints used to trigger a set of programming. Express can be used where a client/server relationship is needed in your code.</p>
+<p>As an example, you could create a route within your Express server process that could answer http requests (this would trigger an endpoint in your code to then send out articles to your website). Another example of a route is code that can send information to a database and update the contents of a database table.</p>
+<p>The Express tutorial on Treehouse was a pretty good source of information, and provides a good starting point for learning about Express. Here is some example code from the tutorial which gives a sample of one way to setup a .js file when working with Express.</p>
+<hr>
+<pre><code>&apos;use strict&apos;;
+
+var express = require(&apos;express&apos;);
+    posts = require(&apos;./mock/posts.json&apos;)
+
+var app = express();
+
+//set up jade template
+app.set (&apos;view engine&apos;, &apos;jade&apos;);
+app.set (&apos;views&apos;, _ _ dirname + &apos;./folder_path&apos;)
+
+app.get(&apos;/&apos;, function(request,response){
+    response.render(&apos;index&apos;)
+});
+
+app.get(&apos;/blog:title?&apos;, function(request, response){
+    var title = request.params.title;
+    if (title === undefined) {
+        res.status(503);
+        res.send(&quot;This page might be created someday.&quot;);
+    }else {
+        // grab post based on the route
+        var post = posts[title] || {};
+        response.render(&apos;posts&apos;, {post : post});
+    }
+});
+
+
+}
+
+app.listen(3000, function(){
+    console.log(&quot;The frontend server is running on port 3000!&quot;)
+});
+</code></pre><hr>
+<p>Another interesting part about the express tutorial was that it also covered Jade templates. One could use Jade templates as a way to quickly create content for the web. Instead of typing out all the html, you can use block syntax (indent by whitespace) in Jade, and when using Jade in conjunction with Express, you can setup your Express server process to handle rendering all the Jade templates into html for usage on a website.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/14/Express/" data-id="ciww18aqp0004tys4bu79ogj1" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Node-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/13/Node-js/" class="article-date">
+  <time datetime="2016-12-14T04:48:24.000Z" itemprop="datePublished">2016-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/13/Node-js/">Node.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is very useful on the backend, as you can design network applications that run on a server.</p>
+<p>Node.JS has its own runtime console, also known as a REPL (Read-Eval-Print-Loop). The behavior is somewhat similar to typing JavaScript into the Google Chrome console, or similar to working with Python where you have a runtime environment to execute your code.</p>
+<p>Out of the box you have have various node specific functions and objects (the library / API) to work with. Each part of the API has various methods which provide additional functionality. For example, there is the File System module (fs). If you use the Readfile method included with fs, you can then read the contents of a file and load it into buffer. This could be useful for dealing with server log files, or going through a list of passwords (which could then be sent through a program to encrypt the passwords).</p>
+<p>To learn more about Node, our team started with the <a href="https://nodeschool.io/#workshoppers" target="_blank" rel="external">NodeSchool</a> tutorial “learnyounode”. Here is one example of code we worked with that reads a file directory, then checks for a particular file extension (basically “find me all the files of this kind in a directory”)</p>
+<hr>
+<pre><code>var fs = require(&apos;fs&apos;);
+var path = require(&apos;path&apos;);
+
+fs.readdir(process.argv[2], function (err, list) {
+  list.forEach(function (filename) {
+    if (path.extname(filename) === &apos;.&apos; + process.argv[3]) {
+      console.log(filename);
+    }
+  });
+});
+</code></pre><hr>
+<p>In hindsight, Nodeschool is not the best starting point in my opinion. While the exercises are very good, they seem to assume a higher level of understanding / prior experience (such as familiarity with callbacks). Callbacks in particular can be difficult to wrap you head around, as now you are dealing with functions where the function will take another function as an argument.</p>
+<p>Our team decided to take a step back and work through the Node.JS basics tutorial on Treehouse which we found to be a better starting point. The “ramp up” of the tutorial is slower, however it is still very dense with information. The tutorial works through various key concepts, and has an exercise that builds a program to parse through JSON objects.</p>
+<h2 id="Key-Learning-Concepts"><a href="#Key-Learning-Concepts" class="headerlink" title="Key Learning Concepts"></a>Key Learning Concepts</h2><ol>
+<li><p>Node can perform tasks that are “non-blocking”, where multiple functions can be running at once. the functions are not “blocked” by other functions running. This is also known as asynchronous, where your program does not have to wait for step 1 of the program to finish before step 2 can start.</p>
+</li>
+<li><p>Node is event driven, where you have requests and responses (an “emitter” and “listener”). This gives you flow control inside the program, where the listener function will call the callback function once a particular event has happened / once a condition has been met.</p>
+</li>
+</ol>
+<h2 id="Additional-Reading-Resources"><a href="#Additional-Reading-Resources" class="headerlink" title="Additional Reading / Resources:"></a>Additional Reading / Resources:</h2><p><a href="https://github.com/maxogden/art-of-node" target="_blank" rel="external">Art of Node</a><br><a href="https://nodesource.com/blog/understanding-the-nodejs-event-loop/" target="_blank" rel="external">Understanding the Node Event Loop</a><br><a href="http://blog.modulus.io/absolute-beginners-guide-to-nodejs" target="_blank" rel="external">An Absolute Beginner’s Guide to Node.JS</a><br><a href="http://www.nodebeginner.org/" target="_blank" rel="external">The Node Beginner Book</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/13/Node-js/" data-id="ciww18ar2000btys494ksdan2" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Object-Oriented-JavaScript" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/12/Object-Oriented-JavaScript/" class="article-date">
+  <time datetime="2016-12-13T06:00:50.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/12/Object-Oriented-JavaScript/">Object-Oriented JavaScript</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Objects can be thought of as a way to create basic building blocks for programs. Within an object you can store various properties and their values. When speaking of object-oriented programming, the Mozilla Developer Network website had the best definition:</p>
+<p>“Object-oriented programming (OOP) is a programming paradigm that uses abstraction to create models based on the real world. OOP envisions software as a collection of cooperating objects rather than a collection of functions or simply a list of commands (as is the traditional view). In OOP, each object can receive messages, process data, and send messages to other objects. Each object can be viewed as an independent little machine with a distinct role or responsibility.”</p>
+<p>To review object - oriented programming, the team completed the Object-Oriented tutorial on Treehouse. This tutorial dealt with creating a program that draws a maze, and then guides a robot character through the maze. Here is a code example from the tutorial which shows how the robot object was created.</p>
+<hr>
+<pre><code>&quot;use strict&quot;;
+
+function Robot() {
+    this.x = null;
+    this.y = null;
+    this.orientation = null;
+    this.maze = null;
+}
+
+Robot.prototype.setMaze = function(maze) {
+    this.maze = maze;
+    this.x = maze.startX;
+    this.y = maze.startY;
+    this.orientation = maze.startOrientation;
+};
+
+Robot.prototype.turnRight = function() {
+    if (!this.maze || this.maze.isValidDirection(this.orientation)) {
+        return false;
+    }
+
+    var rights = {
+        north: &quot;east&quot;,
+        east : &quot;south&quot;,
+        south: &quot;west&quot;,
+        west : &quot;north&quot;
+    }
+    this orientation = rights[this.orientation];
+    return true;
+}
+
+Robot.prototype.turnLeft = function() {
+    if (!this.maze || this.maze.isValidDirection(this.orientation)) {
+        return false;
+    }
+
+    var lefts = {
+        north: &quot;west&quot;,
+        east : &quot;north&quot;,
+        south: &quot;east&quot;,
+        west : &quot;south&quot;
+    }
+    this orientation = lefts[this.orientation];
+    return true;
+}
+
+Robot.prototype.moveForward = function() {
+    if (this.canMoveForward()){
+        return false;
+    }
+
+    switch (this.orientation) {
+        case &quot;north&quot;:
+            this.y += 1;
+            break;
+        case &quot;east&quot;:
+            this.x += 1;
+            break;
+        case &quot;south&quot;:
+            this.y -= 1;
+            break;
+        case &quot;west&quot;:
+            this.x -= 1;
+            break;
+    }
+    return true;
+}
+
+Robot.prototype.canMoveForward = function() {
+    if (!this.maze) {
+        return false;
+    }
+    return this.maze.canMove(this.x, this.y, this.orientation);
+}
+
+Robot.prototype.exitMaze = function(steps) {
+    if (this.maze) {
+        while(steps != 0) {
+            steps -= 1;
+
+            if(this.canMoveForward()){
+                this.moveForward();
+                this.turnLeft();
+
+            }else{
+                this.turnRight();
+            }
+            if (this.x == this.maze.endX &amp;&amp; this.y == this.maze.endY){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+});
+</code></pre><hr>
+<h2 id="Additional-Reading"><a href="#Additional-Reading" class="headerlink" title="Additional Reading"></a>Additional Reading</h2><p><a href="http://eloquentjavascript.net/06_object.html" target="_blank" rel="external">Eloquent Javascript(chapter 6: Objects)</a><br><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&amp;%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes" target="_blank" rel="external">You Don’t Know JS: this and Object Prototypes</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" target="_blank" rel="external">MDN: Intro to Object-Oriented programming</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/12/Object-Oriented-JavaScript/" data-id="ciww18ar4000dtys4im8lc3mw" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objects-OOP/">objects, OOP</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Another-Week-Another-Project" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/12/Another-Week-Another-Project/" class="article-date">
+  <time datetime="2016-12-13T05:06:30.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/12/Another-Week-Another-Project/">Another Week, Another Project</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Time to dive into another project. Monday always seems to be an exciting day here at the guild. There is this buzzing kind of energy. People rushing around to review prior week projects, then obtaining new projects and a new team mate for pair programming. It almost makes Monday not so bad (however I still dislike waking up early on Monday haha). Let’s see what code awaits this week.</p>
+<h1 id="Advanced-JavaScript"><a href="#Advanced-JavaScript" class="headerlink" title="Advanced JavaScript"></a>Advanced JavaScript</h1><p>This week I will be working on the project goal titled Advanced JavaScript. There are a variety of topics covered within the project goal, such as Node.JS tutorials, Express, object-oriented programming, and the module pattern. There are also suggested tutorials for additional review tutorials related to loops/arrays/objects, JQuery, and the DOM.</p>
+<h1 id="Time-constraints"><a href="#Time-constraints" class="headerlink" title="Time constraints"></a>Time constraints</h1><p>After reviewing the project specs, it is definitely a lot of information to cover. My team mate has suggested to cover 3 topics per day, and to approach the project as a general overview/introduction. This sounds like a good game plan to me, and I am looking forward to working on this project.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/12/Another-Week-Another-Project/" data-id="ciww18aqi0001tys4r78o0gjc" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Algorithms-and-Fighting-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -144,7 +563,7 @@ confirmEnding(&quot;Bastian&quot;, &quot;n&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/" data-id="ciwqvqlgm00006ps4gs7w5qez" class="article-share-link">Share</a>
+      <a data-url="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/" data-id="ciww18aqe0000tys4trln1jcu" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li></ul>
@@ -207,7 +626,7 @@ confirmEnding(&quot;Bastian&quot;, &quot;n&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/02/Arrays-and-Functions/" data-id="ciwqvqlgq00016ps4wvzjcw4j" class="article-share-link">Share</a>
+      <a data-url="http://mistakeets.github.io/2016/12/02/Arrays-and-Functions/" data-id="ciww18aqo0003tys4co1bloem" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li></ul>
@@ -350,7 +769,7 @@ updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciwqvqlh000056ps4qmr91klh" class="article-share-link">Share</a>
+      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciww18ar5000ftys4dmid3cix" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -439,7 +858,7 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/30/Javascript-Basics/" data-id="ciwqvqlgx00036ps4p2jsk1bm" class="article-share-link">Share</a>
+      <a data-url="http://mistakeets.github.io/2016/11/30/Javascript-Basics/" data-id="ciww18aqv0008tys4ga27y8fm" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
@@ -451,112 +870,11 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
 
 
   
-    <article id="post-My-Test-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/29/My-Test-Post/" class="article-date">
-  <time datetime="2016-11-30T01:09:50.000Z" itemprop="datePublished">2016-11-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Today was the first full day of working on a project. My time was spent reviewing html tags, CSS, and I learned the basics of using Bootstrap. In my opinion bootstrap feels kind of “messy” when you nest tags inside tags (inside tags!) as shown in this code example which creates labelled buttons:</p>
-<hr>
-<pre><code>&lt;div class=&quot;container-fluid&quot;&gt;
-  &lt;h3 class=&quot;text-primary text-center&quot;&gt;jQuery Playground&lt;/h3&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-xs-6&quot;&gt;
-      &lt;h4&gt;#left-well&lt;/h4&gt;
-      &lt;div class=&quot;well&quot; id=&quot;left-well&quot;&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target1&quot;&gt;#target1&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target2&quot;&gt;#target2&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target3&quot;&gt;#target3&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-xs-6&quot;&gt;
-      &lt;h4&gt;#right-well&lt;/h4&gt;
-      &lt;div class=&quot;well&quot; id=&quot;right-well&quot;&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target4&quot;&gt;#target4&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target5&quot;&gt;#target5&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target6&quot;&gt;#target6&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><hr>
-<p>It took me a little while to get used to working with nested tags again, however working with Bootstrap was fun as I also learned you can use Font Awesome to apply a style or font to a web page using Bootstrap.</p>
-<p>All in all I felt that working through some html, CSS, and Bootstrap tutorials was a useful refresher, however I also felt like I was not pushing myself hard enough.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/29/My-Test-Post/" data-id="ciwqvqlh000046ps4jva3tzox" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/28/hello-world/" class="article-date">
-  <time datetime="2016-11-29T01:09:50.000Z" itemprop="datePublished">2016-11-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/hello-world/">My First Day</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>What a day! After orientation and meetings I chose a mentor and voted on my first project assignment here at the Learners Guild. Suddenly this whole new channel showed up in the chat application and I asked my mentor “Hey what the heck is this?!?!” Oh! I see… I have been assigned a team mate. This is an awesome process!</p>
-<p>My team mate and I will work on the goal of HTML/CSS &amp; JavaScript Basics this week. The majority of our time will be spent reviewing tutorials to ensure we have a solid foundation to build from going forward. This also feels like a good project work on during my first week as I need a refresher on basic JavaScript syntax. Before starting at the Guild I was taking an online course to learn the Python programming language, so now it is time to switch gears to become more comfortable with JavaScript again.</p>
-<p>Let the games begin!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/28/hello-world/" data-id="ciwqmhtf70001e8s4r9k9g41g" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -566,9 +884,9 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm-package/">npm, package</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objects-OOP/">objects, OOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orientation-first/">orientation, first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
     </div>
   </div>
 
@@ -576,9 +894,9 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo-Algorithm-Project1/" style="font-size: 10px;">Hexo, Algorithm, Project1</a> <a href="/tags/Hexo-Algorithms/" style="font-size: 10px;">Hexo, Algorithms</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/learn-project1-bootstrap/" style="font-size: 10px;">learn, project1, bootstrap</a> <a href="/tags/orientation-first/" style="font-size: 10px;">orientation, first</a>
+      <a href="/tags/Hexo-Algorithm-Project1/" style="font-size: 10px;">Hexo, Algorithm, Project1</a> <a href="/tags/Hexo-Algorithms/" style="font-size: 10px;">Hexo, Algorithms</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/learn-project1-bootstrap/" style="font-size: 10px;">learn, project1, bootstrap</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/npm-package/" style="font-size: 10px;">npm, package</a> <a href="/tags/objects-OOP/" style="font-size: 10px;">objects, OOP</a> <a href="/tags/orientation-first/" style="font-size: 10px;">orientation, first</a> <a href="/tags/tutorials/" style="font-size: 10px;">tutorials</a>
     </div>
   </div>
 
@@ -595,28 +913,28 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2016/12/03/Algorithms-and-Fighting-Hexo/">More Algorithms and Fighting Hexo</a>
+            <a href="/2016/12/16/Project-Specs/">Project Specs / Estimates</a>
           </li>
         
           <li>
-            <a href="/2016/12/02/Arrays-and-Functions/">Arrays and Basic Algorithms</a>
+            <a href="/2016/12/15/NPM-Basics/">NPM Basics</a>
           </li>
         
           <li>
-            <a href="/2016/12/01/Objects-are-Your-Friend/">Objects are Your Friend</a>
+            <a href="/2016/12/14/Express/">Express</a>
           </li>
         
           <li>
-            <a href="/2016/11/30/Javascript-Basics/">Javascript Basics</a>
+            <a href="/2016/12/13/Node-js/">Node.js</a>
           </li>
         
           <li>
-            <a href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
+            <a href="/2016/12/12/Object-Oriented-JavaScript/">Object-Oriented JavaScript</a>
           </li>
         
       </ul>
@@ -632,7 +950,7 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 Keith Oppel<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

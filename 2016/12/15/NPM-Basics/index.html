@@ -3,27 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Objects are Your Friend | Becoming Friends with JavaScript</title>
+  <title>NPM Basics | Becoming Friends with JavaScript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
+  <meta name="description" content="The NPM Basics tutorial on Treehouse was a very informative tutorial that provided many useful tips and commands related to working with npm packages.
+How to compare packages that do similar things (s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Objects are Your Friend">
-<meta property="og:url" content="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/index.html">
+<meta property="og:title" content="NPM Basics">
+<meta property="og:url" content="http://mistakeets.github.io/2016/12/15/NPM-Basics/index.html">
 <meta property="og:site_name" content="Becoming Friends with JavaScript">
-<meta property="og:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
-<meta property="og:updated_time" content="2016-12-05T12:12:58.000Z">
+<meta property="og:description" content="The NPM Basics tutorial on Treehouse was a very informative tutorial that provided many useful tips and commands related to working with npm packages.
+How to compare packages that do similar things (s">
+<meta property="og:updated_time" content="2016-12-19T12:05:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Objects are Your Friend">
-<meta name="twitter:description" content="Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.
-Accessing Nested Objects:var myStorage = {
-  &amp;quot;car&amp;quot;: {
-    &amp;quot;ins">
+<meta name="twitter:title" content="NPM Basics">
+<meta name="twitter:description" content="The NPM Basics tutorial on Treehouse was a very informative tutorial that provided many useful tips and commands related to working with npm packages.
+How to compare packages that do similar things (s">
   
     <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
   
@@ -72,10 +66,10 @@ Accessing Nested Objects:var myStorage = {
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Objects-are-Your-Friend" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-NPM-Basics" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/12/01/Objects-are-Your-Friend/" class="article-date">
-  <time datetime="2016-12-02T00:33:32.000Z" itemprop="datePublished">2016-12-01</time>
+    <a href="/2016/12/15/NPM-Basics/" class="article-date">
+  <time datetime="2016-12-16T03:45:05.000Z" itemprop="datePublished">2016-12-15</time>
 </a>
     
   </div>
@@ -86,7 +80,7 @@ Accessing Nested Objects:var myStorage = {
         
   
     <h1 class="article-title" itemprop="name">
-      Objects are Your Friend
+      NPM Basics
     </h1>
   
 
@@ -94,137 +88,56 @@ Accessing Nested Objects:var myStorage = {
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today my team mate and I started work on tutorials about JavaScript Objects. Here are a few examples of code we worked on.</p>
-<h2 id="Accessing-Nested-Objects"><a href="#Accessing-Nested-Objects" class="headerlink" title="Accessing Nested Objects:"></a>Accessing Nested Objects:</h2><pre><code>var myStorage = {
-  &quot;car&quot;: {
-    &quot;inside&quot;: {
-      &quot;glove box&quot;: &quot;maps&quot;,
-      &quot;passenger seat&quot;: &quot;crumbs&quot;
-     },
-    &quot;outside&quot;: {
-      &quot;trunk&quot;: &quot;jack&quot;
-    }
-  }
-};
-
-var gloveBoxContents = myStorage.car.inside[&quot;glove box&quot;];
-</code></pre><hr>
-<h2 id="Accessing-Nested-Arrays"><a href="#Accessing-Nested-Arrays" class="headerlink" title="Accessing Nested Arrays:"></a>Accessing Nested Arrays:</h2><pre><code>var myPlants = [
-  {
-    type: &quot;flowers&quot;,
-    list: [
-      &quot;rose&quot;,
-      &quot;tulip&quot;,
-      &quot;dandelion&quot;
-    ]
-  },
-  {
-    type: &quot;trees&quot;,
-    list: [
-      &quot;fir&quot;,
-      &quot;pine&quot;,
-      &quot;birch&quot;
-    ]
-  }  
-];
-
-var secondTree = myPlants[1].list[1];
-</code></pre><hr>
-<h2 id="Using-Objects-for-Lookups"><a href="#Using-Objects-for-Lookups" class="headerlink" title="Using Objects for Lookups:"></a>Using Objects for Lookups:</h2><pre><code>function phoneticLookup(val) {
-  var result = &quot;&quot;;
-  var lookup = {
-    alpha: &quot;Adams&quot;,
-    bravo: &quot;Boston&quot;,
-    charlie : &quot;Chicago&quot;,
-    delta : &quot;Denver&quot;,
-    echo : &quot;Easy&quot;,
-    foxtrot : &quot;Frank&quot;,
-
-  };
-
-  result = lookup[val];
-  return result;
-}
-
-// Change this value to test
-phoneticLookup(&quot;alpha&quot;);
-</code></pre><hr>
-<p>The real challenge of the day was working on a tutorial called Record Collection where you have a JSON object that represents a collection of music, and a function must be created to modify the data in the object (such as adding a song name, updating an artist name, or adding an album name). My team mate and I struggled to find a solution however we eventually got everything to work. A very proud “a ha” moment!</p>
-<h2 id="Record-Collection-code"><a href="#Record-Collection-code" class="headerlink" title="Record Collection code:"></a>Record Collection code:</h2><pre><code>var collection = {
-    &quot;2548&quot;: {
-      &quot;album&quot;: &quot;Slippery When Wet&quot;,
-      &quot;artist&quot;: &quot;Bon Jovi&quot;,
-      &quot;tracks&quot;: [
-        &quot;Let It Rock&quot;,
-        &quot;You Give Love a Bad Name&quot;
-      ]
-    },
-    &quot;2468&quot;: {
-      &quot;album&quot;: &quot;1999&quot;,
-      &quot;artist&quot;: &quot;Prince&quot;,
-      &quot;tracks&quot;: [
-        &quot;1999&quot;,
-        &quot;Little Red Corvette&quot;
-      ]
-    },
-    &quot;1245&quot;: {
-      &quot;artist&quot;: &quot;Robert Palmer&quot;,
-      &quot;tracks&quot;: [ ]
-    },
-    &quot;5439&quot;: {
-      &quot;album&quot;: &quot;ABBA Gold&quot;
-    }
-};
-// Keep a copy of the collection for tests
-var collectionCopy = JSON.parse(JSON.stringify(collection));
-
-function updateRecords(id, prop, value) {
-  if (prop === &quot;tracks&quot; &amp;&amp; value !== &quot;&quot;) {
-   if(collection[id][prop]) {
-    collection[id][prop].push(value);
-   }
-    else {
-    collection[id][prop]=[value];
-    }
-  } else if (value !== &quot;&quot;) {
-    collection[id][prop] = value;
-  } else {
-    delete collection[id][prop];
-  }
-
-  return collection;
-}
-
-// Alter values below to test your code
-updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
-</code></pre><hr>
-<p>Good times! </p>
+        <p>The NPM Basics tutorial on Treehouse was a very informative tutorial that provided many useful tips and commands related to working with npm packages.</p>
+<h2 id="How-to-compare-packages-that-do-similar-things-such-as-bcrypt-vs-bcrypt-nodes"><a href="#How-to-compare-packages-that-do-similar-things-such-as-bcrypt-vs-bcrypt-nodes" class="headerlink" title="How to compare packages that do similar things (such as bcrypt vs bcrypt nodes)"></a>How to compare packages that do similar things (such as bcrypt vs bcrypt nodes)</h2><ol>
+<li>Look at how often new versions are released (are there regular updates or is there no active development?)</li>
+<li>Look at how many contributors on GitHub</li>
+<li>Look at google ranking</li>
+<li>Look for testing information</li>
+</ol>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>—npm init<br>(The utility asks you all the questions related to generating a package.json file instead of manually editing the file)<br>—name the package, version number, test command, entry point, open source license etc</p>
+<p>—save use to add an npm package to your dependency list on your package.json</p>
+<p>.gitignore file so you can define things to ignore such as have your project ignore npm packets during a deployment/git push (no need to upload npm packages to your GitHub page, thats what the package.json is for)</p>
+<p>—save-dev Dev dependency - define dependencies for developers / people planning to contribute to your project (packages not needed by end users)</p>
+<p>Node_env = production npm install (install only reg dependency, will not install dev dependency)</p>
+<h2 id="Versioning"><a href="#Versioning" class="headerlink" title="Versioning"></a>Versioning</h2><p>1.0.0<br>First digit = major release (1.0 to 2.0)<br>Second digit = minor release (such as 1.1)<br>Third digit = patch release (such as 1.0.1 or 1.1.3)</p>
+<p>Use Tilda ~ in the package.json to only allow new patch releases to be installed (such if depend is ver 0.8.3, you could use 0.8.4 or 0.8.5, but not 0.9)</p>
+<p>Use ^ to allow minor version (if you package.json has version 1.0 of something, but a new version is available, go ahead and allow npm update to install 1.1, but not 2.0)</p>
+<h2 id="Updating-npm-packages"><a href="#Updating-npm-packages" class="headerlink" title="Updating npm packages"></a>Updating npm packages</h2><p>npm update <package name=""> -g</package></p>
+<h2 id="Install-uninstall"><a href="#Install-uninstall" class="headerlink" title="Install / uninstall"></a>Install / uninstall</h2><p>npm install / npm uninstall</p>
+<p>Install-all : install reg dep and dev dep</p>
+<p>-g global install of the npm package</p>
+<p>npm uninstall <package name=""> —save-dev (remove a dev dependency)</package></p>
+<p>Npm uninstall <package name=""> -g (uninstall global)</package></p>
+<p>Npm outdated - check to see if any packages need to be updated</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciww18ar5000ftys4dmid3cix" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/15/NPM-Basics/" data-id="ciww18aqr0005tys4nqt4vfcg" class="article-share-link">Partager</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm-package/">npm, package</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/12/02/Arrays-and-Functions/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/12/16/Project-Specs/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
-          Arrays and Basic Algorithms
+          Project Specs / Estimates
         
       </div>
     </a>
   
   
-    <a href="/2016/11/30/Javascript-Basics/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/14/Express/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Javascript Basics</div>
+      <div class="article-nav-title">Express</div>
     </a>
   
 </nav>
