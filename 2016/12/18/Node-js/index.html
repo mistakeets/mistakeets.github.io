@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Becoming Friends with JavaScript</title>
+  <title>Node.js | Becoming Friends with JavaScript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Becoming Friends with JavaScript">
-<meta property="og:url" content="http://mistakeets.github.io/page/2/index.html">
+  <meta name="description" content="As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is ver">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js">
+<meta property="og:url" content="http://mistakeets.github.io/2016/12/18/Node-js/index.html">
 <meta property="og:site_name" content="Becoming Friends with JavaScript">
+<meta property="og:description" content="As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is ver">
+<meta property="og:updated_time" content="2016-12-19T20:59:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Becoming Friends with JavaScript">
+<meta name="twitter:title" content="Node.js">
+<meta name="twitter:description" content="As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is ver">
   
     <link rel="alternate" href="/atom.xml" title="Becoming Friends with JavaScript" type="application/atom+xml">
   
@@ -59,12 +63,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-My-Test-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Node-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/11/29/My-Test-Post/" class="article-date">
-  <time datetime="2016-11-30T01:09:50.000Z" itemprop="datePublished">2016-11-29</time>
+    <a href="/2016/12/18/Node-js/" class="article-date">
+  <time datetime="2016-12-19T07:48:24.000Z" itemprop="datePublished">2016-12-18</time>
 </a>
     
   </div>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/My-Test-Post/">40 Weeks 40 Projects</a>
+    <h1 class="article-title" itemprop="name">
+      Node.js
     </h1>
   
 
@@ -83,94 +85,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Today was the first full day of working on a project. My time was spent reviewing html tags, CSS, and I learned the basics of using Bootstrap. In my opinion bootstrap feels kind of “messy” when you nest tags inside tags (inside tags!) as shown in this code example which creates labelled buttons:</p>
+        <p>As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is very useful on the backend, as you can design network applications that run on a server.</p>
+<p>Node.JS has its own runtime console, also known as a REPL (Read-Eval-Print-Loop). The behavior is somewhat similar to typing JavaScript into the Google Chrome console, or similar to working with Python where you have a runtime environment to execute your code.</p>
+<p>Out of the box you have have various node specific functions and objects (the library / API) to work with. Each part of the API has various methods which provide additional functionality. For example, there is the File System module (fs). If you use the Readfile method included with fs, you can then read the contents of a file and load it into buffer. This could be useful for dealing with server log files, or going through a list of passwords (which could then be sent through a program to encrypt the passwords).</p>
+<p>To learn more about Node, our team started with the <a href="https://nodeschool.io/#workshoppers" target="_blank" rel="external">NodeSchool</a> tutorial “learnyounode”. Here is one example of code we worked with that reads a file directory, then checks for a particular file extension (basically “find me all the files of this kind in a directory”)</p>
 <hr>
-<pre><code>&lt;div class=&quot;container-fluid&quot;&gt;
-  &lt;h3 class=&quot;text-primary text-center&quot;&gt;jQuery Playground&lt;/h3&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-xs-6&quot;&gt;
-      &lt;h4&gt;#left-well&lt;/h4&gt;
-      &lt;div class=&quot;well&quot; id=&quot;left-well&quot;&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target1&quot;&gt;#target1&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target2&quot;&gt;#target2&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target3&quot;&gt;#target3&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-xs-6&quot;&gt;
-      &lt;h4&gt;#right-well&lt;/h4&gt;
-      &lt;div class=&quot;well&quot; id=&quot;right-well&quot;&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target4&quot;&gt;#target4&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target5&quot;&gt;#target5&lt;/button&gt;
-        &lt;button class=&quot;btn btn-default target&quot; id=&quot;target6&quot;&gt;#target6&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<pre><code>var fs = require(&apos;fs&apos;);
+var path = require(&apos;path&apos;);
+
+fs.readdir(process.argv[2], function (err, list) {
+  list.forEach(function (filename) {
+    if (path.extname(filename) === &apos;.&apos; + process.argv[3]) {
+      console.log(filename);
+    }
+  });
+});
 </code></pre><hr>
-<p>It took me a little while to get used to working with nested tags again, however working with Bootstrap was fun as I also learned you can use Font Awesome to apply a style or font to a web page using Bootstrap.</p>
-<p>All in all I felt that working through some html, CSS, and Bootstrap tutorials was a useful refresher, however I also felt like I was not pushing myself hard enough.</p>
+<p>In hindsight, Nodeschool is not the best starting point in my opinion. While the exercises are very good, they seem to assume a higher level of understanding / prior experience (such as familiarity with callbacks). Callbacks in particular can be difficult to wrap you head around, as now you are dealing with functions where the function will take another function as an argument.</p>
+<p>Our team decided to take a step back and work through the Node.JS basics tutorial on Treehouse which we found to be a better starting point. The “ramp up” of the tutorial is slower, however it is still very dense with information. The tutorial works through various key concepts, and has an exercise that builds a program to parse through JSON objects.</p>
+<h2 id="Key-Learning-Concepts"><a href="#Key-Learning-Concepts" class="headerlink" title="Key Learning Concepts"></a>Key Learning Concepts</h2><ol>
+<li><p>Node can perform tasks that are “non-blocking”, where multiple functions can be running at once. the functions are not “blocked” by other functions running. This is also known as asynchronous, where your program does not have to wait for step 1 of the program to finish before step 2 can start.</p>
+</li>
+<li><p>Node is event driven, where you have requests and responses (an “emitter” and “listener”). This gives you flow control inside the program, where the listener function will call the callback function once a particular event has happened / once a condition has been met.</p>
+</li>
+</ol>
+<h2 id="Additional-Reading-Resources"><a href="#Additional-Reading-Resources" class="headerlink" title="Additional Reading / Resources:"></a>Additional Reading / Resources:</h2><p><a href="https://github.com/maxogden/art-of-node" target="_blank" rel="external">Art of Node</a><br><a href="https://nodesource.com/blog/understanding-the-nodejs-event-loop/" target="_blank" rel="external">Understanding the Node Event Loop</a><br><a href="http://blog.modulus.io/absolute-beginners-guide-to-nodejs" target="_blank" rel="external">An Absolute Beginner’s Guide to Node.JS</a><br><a href="http://www.nodebeginner.org/" target="_blank" rel="external">The Node Beginner Book</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/29/My-Test-Post/" data-id="cj0obs1fd00081vs4dwo92bt4" class="article-share-link">Share</a>
+      <a data-url="http://mistakeets.github.io/2016/12/18/Node-js/" data-id="cj0obs1fh000b1vs424hyprsc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
 
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/28/hello-world/" class="article-date">
-  <time datetime="2016-11-29T01:09:50.000Z" itemprop="datePublished">2016-11-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/hello-world/">My First Day</a>
-    </h1>
+    <a href="/2016/12/16/Project-Specs/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Project Specs / Estimates</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>What a day! After orientation and meetings I chose a mentor and voted on my first project assignment here at the Learners Guild. Suddenly this whole new channel showed up in the chat application and I asked my mentor “Hey what the heck is this?!?!” Oh! I see… I have been assigned a team mate. This is an awesome process!</p>
-<p>My team mate and I will work on the goal of HTML/CSS &amp; JavaScript Basics this week. The majority of our time will be spent reviewing tutorials to ensure we have a solid foundation to build from going forward. This also feels like a good project work on during my first week as I need a refresher on basic JavaScript syntax. Before starting at the Guild I was taking an online course to learn the Python programming language, so now it is time to switch gears to become more comfortable with JavaScript again.</p>
-<p>Let the games begin!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/28/hello-world/" data-id="cj0obs1fm000j1vs4tifp19lx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/orientation-first/">orientation, first</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
-
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
 </section>
         
           <aside id="sidebar">

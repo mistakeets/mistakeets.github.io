@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mistakeets.github.io"></form>
@@ -60,6 +60,69 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Node-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/18/Node-js/" class="article-date">
+  <time datetime="2016-12-19T07:48:24.000Z" itemprop="datePublished">2016-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/18/Node-js/">Node.js</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is very useful on the backend, as you can design network applications that run on a server.</p>
+<p>Node.JS has its own runtime console, also known as a REPL (Read-Eval-Print-Loop). The behavior is somewhat similar to typing JavaScript into the Google Chrome console, or similar to working with Python where you have a runtime environment to execute your code.</p>
+<p>Out of the box you have have various node specific functions and objects (the library / API) to work with. Each part of the API has various methods which provide additional functionality. For example, there is the File System module (fs). If you use the Readfile method included with fs, you can then read the contents of a file and load it into buffer. This could be useful for dealing with server log files, or going through a list of passwords (which could then be sent through a program to encrypt the passwords).</p>
+<p>To learn more about Node, our team started with the <a href="https://nodeschool.io/#workshoppers" target="_blank" rel="external">NodeSchool</a> tutorial “learnyounode”. Here is one example of code we worked with that reads a file directory, then checks for a particular file extension (basically “find me all the files of this kind in a directory”)</p>
+<hr>
+<pre><code>var fs = require(&apos;fs&apos;);
+var path = require(&apos;path&apos;);
+
+fs.readdir(process.argv[2], function (err, list) {
+  list.forEach(function (filename) {
+    if (path.extname(filename) === &apos;.&apos; + process.argv[3]) {
+      console.log(filename);
+    }
+  });
+});
+</code></pre><hr>
+<p>In hindsight, Nodeschool is not the best starting point in my opinion. While the exercises are very good, they seem to assume a higher level of understanding / prior experience (such as familiarity with callbacks). Callbacks in particular can be difficult to wrap you head around, as now you are dealing with functions where the function will take another function as an argument.</p>
+<p>Our team decided to take a step back and work through the Node.JS basics tutorial on Treehouse which we found to be a better starting point. The “ramp up” of the tutorial is slower, however it is still very dense with information. The tutorial works through various key concepts, and has an exercise that builds a program to parse through JSON objects.</p>
+<h2 id="Key-Learning-Concepts"><a href="#Key-Learning-Concepts" class="headerlink" title="Key Learning Concepts"></a>Key Learning Concepts</h2><ol>
+<li><p>Node can perform tasks that are “non-blocking”, where multiple functions can be running at once. the functions are not “blocked” by other functions running. This is also known as asynchronous, where your program does not have to wait for step 1 of the program to finish before step 2 can start.</p>
+</li>
+<li><p>Node is event driven, where you have requests and responses (an “emitter” and “listener”). This gives you flow control inside the program, where the listener function will call the callback function once a particular event has happened / once a condition has been met.</p>
+</li>
+</ol>
+<h2 id="Additional-Reading-Resources"><a href="#Additional-Reading-Resources" class="headerlink" title="Additional Reading / Resources:"></a>Additional Reading / Resources:</h2><p><a href="https://github.com/maxogden/art-of-node" target="_blank" rel="external">Art of Node</a><br><a href="https://nodesource.com/blog/understanding-the-nodejs-event-loop/" target="_blank" rel="external">Understanding the Node Event Loop</a><br><a href="http://blog.modulus.io/absolute-beginners-guide-to-nodejs" target="_blank" rel="external">An Absolute Beginner’s Guide to Node.JS</a><br><a href="http://www.nodebeginner.org/" target="_blank" rel="external">The Node Beginner Book</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mistakeets.github.io/2016/12/18/Node-js/" data-id="cj0obs1fh000b1vs424hyprsc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Project-Specs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -89,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/16/Project-Specs/" data-id="ciww18ar6000htys4u71exeyw" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/16/Project-Specs/" data-id="cj0obs1fj000f1vs4xc5skzhp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/15/NPM-Basics/" data-id="ciww18aqr0005tys4nqt4vfcg" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/15/NPM-Basics/" data-id="cj0obs1ff00091vs4bxuo9glq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm-package/">npm, package</a></li></ul>
@@ -224,73 +287,10 @@ app.listen(3000, function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/14/Express/" data-id="ciww18aqp0004tys4bu79ogj1" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/14/Express/" data-id="cj0obs1f800031vs4srf3h7h8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Node-js" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/13/Node-js/" class="article-date">
-  <time datetime="2016-12-14T04:48:24.000Z" itemprop="datePublished">2016-12-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/Node-js/">Node.js</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>As part of the weekly project we also had a goal of learning more about Node. The Node.JS is a JavaScript runtime, which gives you the ability to run JavaScript outside of the web browser. This is very useful on the backend, as you can design network applications that run on a server.</p>
-<p>Node.JS has its own runtime console, also known as a REPL (Read-Eval-Print-Loop). The behavior is somewhat similar to typing JavaScript into the Google Chrome console, or similar to working with Python where you have a runtime environment to execute your code.</p>
-<p>Out of the box you have have various node specific functions and objects (the library / API) to work with. Each part of the API has various methods which provide additional functionality. For example, there is the File System module (fs). If you use the Readfile method included with fs, you can then read the contents of a file and load it into buffer. This could be useful for dealing with server log files, or going through a list of passwords (which could then be sent through a program to encrypt the passwords).</p>
-<p>To learn more about Node, our team started with the <a href="https://nodeschool.io/#workshoppers" target="_blank" rel="external">NodeSchool</a> tutorial “learnyounode”. Here is one example of code we worked with that reads a file directory, then checks for a particular file extension (basically “find me all the files of this kind in a directory”)</p>
-<hr>
-<pre><code>var fs = require(&apos;fs&apos;);
-var path = require(&apos;path&apos;);
-
-fs.readdir(process.argv[2], function (err, list) {
-  list.forEach(function (filename) {
-    if (path.extname(filename) === &apos;.&apos; + process.argv[3]) {
-      console.log(filename);
-    }
-  });
-});
-</code></pre><hr>
-<p>In hindsight, Nodeschool is not the best starting point in my opinion. While the exercises are very good, they seem to assume a higher level of understanding / prior experience (such as familiarity with callbacks). Callbacks in particular can be difficult to wrap you head around, as now you are dealing with functions where the function will take another function as an argument.</p>
-<p>Our team decided to take a step back and work through the Node.JS basics tutorial on Treehouse which we found to be a better starting point. The “ramp up” of the tutorial is slower, however it is still very dense with information. The tutorial works through various key concepts, and has an exercise that builds a program to parse through JSON objects.</p>
-<h2 id="Key-Learning-Concepts"><a href="#Key-Learning-Concepts" class="headerlink" title="Key Learning Concepts"></a>Key Learning Concepts</h2><ol>
-<li><p>Node can perform tasks that are “non-blocking”, where multiple functions can be running at once. the functions are not “blocked” by other functions running. This is also known as asynchronous, where your program does not have to wait for step 1 of the program to finish before step 2 can start.</p>
-</li>
-<li><p>Node is event driven, where you have requests and responses (an “emitter” and “listener”). This gives you flow control inside the program, where the listener function will call the callback function once a particular event has happened / once a condition has been met.</p>
-</li>
-</ol>
-<h2 id="Additional-Reading-Resources"><a href="#Additional-Reading-Resources" class="headerlink" title="Additional Reading / Resources:"></a>Additional Reading / Resources:</h2><p><a href="https://github.com/maxogden/art-of-node" target="_blank" rel="external">Art of Node</a><br><a href="https://nodesource.com/blog/understanding-the-nodejs-event-loop/" target="_blank" rel="external">Understanding the Node Event Loop</a><br><a href="http://blog.modulus.io/absolute-beginners-guide-to-nodejs" target="_blank" rel="external">An Absolute Beginner’s Guide to Node.JS</a><br><a href="http://www.nodebeginner.org/" target="_blank" rel="external">The Node Beginner Book</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/13/Node-js/" data-id="ciww18ar2000btys494ksdan2" class="article-share-link">Partager</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
 
     </footer>
   </div>
@@ -427,7 +427,7 @@ Robot.prototype.exitMaze = function(steps) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/12/Object-Oriented-JavaScript/" data-id="ciww18ar4000dtys4im8lc3mw" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/12/Object-Oriented-JavaScript/" data-id="cj0obs1fi000d1vs4zwki1qt6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objects-OOP/">objects, OOP</a></li></ul>
@@ -468,7 +468,7 @@ Robot.prototype.exitMaze = function(steps) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/12/Another-Week-Another-Project/" data-id="ciww18aqi0001tys4r78o0gjc" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/12/Another-Week-Another-Project/" data-id="cj0obs1ez00001vs4uf0wbj8y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
@@ -563,7 +563,7 @@ confirmEnding(&quot;Bastian&quot;, &quot;n&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/" data-id="ciww18aqe0000tys4trln1jcu" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/03/Algorithms-and-Fighting-Hexo/" data-id="cj0obs1f300011vs4w59dlbaq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li></ul>
@@ -626,7 +626,7 @@ confirmEnding(&quot;Bastian&quot;, &quot;n&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/02/Arrays-and-Functions/" data-id="ciww18aqo0003tys4co1bloem" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/02/Arrays-and-Functions/" data-id="cj0obs1f900041vs4syffj797" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li></ul>
@@ -769,7 +769,7 @@ updateRecords(5439, &quot;artist&quot;, &quot;ABBA&quot;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="ciww18ar5000ftys4dmid3cix" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/12/01/Objects-are-Your-Friend/" data-id="cj0obs1fk000h1vs4o13o30nw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -858,7 +858,7 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mistakeets.github.io/2016/11/30/Javascript-Basics/" data-id="ciww18aqv0008tys4ga27y8fm" class="article-share-link">Partager</a>
+      <a data-url="http://mistakeets.github.io/2016/11/30/Javascript-Basics/" data-id="cj0obs1fb00051vs468cc64s3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
@@ -884,7 +884,7 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithm-Project1/">Hexo, Algorithm, Project1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo-Algorithms/">Hexo, Algorithms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn-project1-bootstrap/">learn, project1, bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm-package/">npm, package</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objects-OOP/">objects, OOP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/orientation-first/">orientation, first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorials/">tutorials</a></li></ul>
     </div>
@@ -894,7 +894,7 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/Hexo-Algorithm-Project1/" style="font-size: 10px;">Hexo, Algorithm, Project1</a> <a href="/tags/Hexo-Algorithms/" style="font-size: 10px;">Hexo, Algorithms</a> <a href="/tags/express/" style="font-size: 10px;">express</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/learn-project1-bootstrap/" style="font-size: 10px;">learn, project1, bootstrap</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/npm-package/" style="font-size: 10px;">npm, package</a> <a href="/tags/objects-OOP/" style="font-size: 10px;">objects, OOP</a> <a href="/tags/orientation-first/" style="font-size: 10px;">orientation, first</a> <a href="/tags/tutorials/" style="font-size: 10px;">tutorials</a>
     </div>
@@ -913,9 +913,13 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/12/18/Node-js/">Node.js</a>
+          </li>
         
           <li>
             <a href="/2016/12/16/Project-Specs/">Project Specs / Estimates</a>
@@ -927,10 +931,6 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
         
           <li>
             <a href="/2016/12/14/Express/">Express</a>
-          </li>
-        
-          <li>
-            <a href="/2016/12/13/Node-js/">Node.js</a>
           </li>
         
           <li>
@@ -949,8 +949,8 @@ cc(2); cc(3); cc(7); cc(&apos;K&apos;); cc(&apos;A&apos;);
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 Keith Oppel<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2017 Keith Oppel<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
